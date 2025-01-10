@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Git\\ApiSchool\\SchoolApi\\SchoolApi\\SchoolApi.csproj": {}
+    "E:\\Git\\APISchool\\SchoolApi\\SchoolApi\\SchoolApi.csproj": {}
   },
   "projects": {
-    "E:\\Git\\ApiSchool\\SchoolApi\\SchoolApi\\SchoolApi.csproj": {
+    "E:\\Git\\APISchool\\SchoolApi\\SchoolApi\\SchoolApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Git\\ApiSchool\\SchoolApi\\SchoolApi\\SchoolApi.csproj",
+        "projectUniqueName": "E:\\Git\\APISchool\\SchoolApi\\SchoolApi\\SchoolApi.csproj",
         "projectName": "SchoolApi",
-        "projectPath": "E:\\Git\\ApiSchool\\SchoolApi\\SchoolApi\\SchoolApi.csproj",
+        "projectPath": "E:\\Git\\APISchool\\SchoolApi\\SchoolApi\\SchoolApi.csproj",
         "packagesPath": "C:\\Users\\joaov\\.nuget\\packages\\",
-        "outputPath": "E:\\Git\\ApiSchool\\SchoolApi\\SchoolApi\\obj\\",
+        "outputPath": "E:\\Git\\APISchool\\SchoolApi\\SchoolApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,6 +50,20 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
