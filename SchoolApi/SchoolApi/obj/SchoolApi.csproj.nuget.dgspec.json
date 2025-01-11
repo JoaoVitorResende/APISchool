@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Git\\APISchool\\SchoolApi\\SchoolApi\\SchoolApi.csproj": {}
+    "E:\\Git\\ApiSchool\\SchoolApi\\SchoolApi\\SchoolApi.csproj": {}
   },
   "projects": {
-    "E:\\Git\\APISchool\\SchoolApi\\SchoolApi\\SchoolApi.csproj": {
+    "E:\\Git\\ApiSchool\\SchoolApi\\SchoolApi\\SchoolApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Git\\APISchool\\SchoolApi\\SchoolApi\\SchoolApi.csproj",
+        "projectUniqueName": "E:\\Git\\ApiSchool\\SchoolApi\\SchoolApi\\SchoolApi.csproj",
         "projectName": "SchoolApi",
-        "projectPath": "E:\\Git\\APISchool\\SchoolApi\\SchoolApi\\SchoolApi.csproj",
+        "projectPath": "E:\\Git\\ApiSchool\\SchoolApi\\SchoolApi\\SchoolApi.csproj",
         "packagesPath": "C:\\Users\\joaov\\.nuget\\packages\\",
-        "outputPath": "E:\\Git\\APISchool\\SchoolApi\\SchoolApi\\obj\\",
+        "outputPath": "E:\\Git\\ApiSchool\\SchoolApi\\SchoolApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

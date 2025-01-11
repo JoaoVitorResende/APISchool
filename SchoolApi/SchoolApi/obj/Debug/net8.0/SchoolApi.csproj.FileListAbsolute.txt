@@ -160,3 +160,4 @@ E:\Git\APISchool\SchoolApi\SchoolApi\bin\Debug\net8.0\runtimes\win-arm64\native\
 E:\Git\APISchool\SchoolApi\SchoolApi\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
 E:\Git\APISchool\SchoolApi\SchoolApi\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
 E:\Git\APISchool\SchoolApi\SchoolApi\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+E:\Git\ApiSchool\SchoolApi\SchoolApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

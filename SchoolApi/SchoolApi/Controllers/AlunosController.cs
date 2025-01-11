@@ -14,27 +14,63 @@ namespace SchoolApi.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok();
+            try
+            {
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable,"Serviço indisponivel");
+            }
+            
         }
         [HttpGet("{AlunoId}")]
         public IActionResult Get(int AlunoId)
         {
-            return Ok();
+            try
+            {
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, "Serviço indisponivel");
+            }
         }
         [HttpPost]
         public IActionResult Post()
         {
-            return Ok();
+            try
+            {
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, "Serviço indisponivel");
+            }
         }
         [HttpPut("{AlunoId}")]
         public IActionResult Put(int AlunoId) 
         {
-            return Ok();
+            try
+            {
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, "Serviço indisponivel");
+            }
         }
         [HttpDelete("{AlunoId}")]
         public IActionResult Delete(int AlunoId) 
         {
-            return Ok();
+            try
+            {
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, "Serviço indisponivel");
+            }
         }
     }
 }
