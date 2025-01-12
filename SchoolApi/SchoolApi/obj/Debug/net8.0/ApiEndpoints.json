@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "SchoolApi.Controllers.AlunosController",
-    "Method": "Get",
+    "Method": "GetAll",
     "RelativePath": "api/Alunos",
     "HttpMethod": "GET",
     "IsController": true,
@@ -18,6 +18,11 @@
     "Order": 0,
     "Parameters": [
       {
+        "Name": "AlunoId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
         "Name": "model",
         "Type": "SchoolApi.Models.Aluno",
         "IsRequired": true
@@ -27,7 +32,7 @@
   },
   {
     "ContainingType": "SchoolApi.Controllers.AlunosController",
-    "Method": "Get",
+    "Method": "GetByAlunoId",
     "RelativePath": "api/Alunos/{AlunoId}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -53,6 +58,11 @@
         "Name": "AlunoId",
         "Type": "System.Int32",
         "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "SchoolApi.Models.Aluno",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -74,8 +84,24 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "SchoolApi.Controllers.AlunosController",
+    "Method": "GetByProfessorID",
+    "RelativePath": "api/Alunos/ByProfessor/{ProfessorId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ProfessorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "SchoolApi.Controllers.ProfessorController",
-    "Method": "Get",
+    "Method": "GetAllProfessores",
     "RelativePath": "api/Professor",
     "HttpMethod": "GET",
     "IsController": true,
@@ -101,7 +127,7 @@
   },
   {
     "ContainingType": "SchoolApi.Controllers.ProfessorController",
-    "Method": "Get",
+    "Method": "GetProfessoresById",
     "RelativePath": "api/Professor/{ProfessorId}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -124,8 +150,13 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "ProfessorId",
+        "Name": "professorId",
         "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "SchoolApi.Models.Professor",
         "IsRequired": true
       }
     ],

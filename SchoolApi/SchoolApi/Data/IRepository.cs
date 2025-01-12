@@ -10,7 +10,7 @@ namespace SchoolApi.Data
         Task<bool> SaveChangesAsync();
         Task<Aluno[]> GetAllAlunosAsync(bool isProfessorIncluido);
         Task<Aluno[]> GetAlunosAsyncByProfessorId(int professorId, bool isProfessorIncluido);
-        Task<Aluno[]> GetAlunoAsyncById(int alunoId, bool isProfessorIncluido);
+        Task<Aluno> GetAlunoAsyncById(int alunoId, bool isProfessorIncluido);
         Task<Professor[]> GetAllProfessoresAsync(bool isAlunoIncluido);
         Task<Professor> GetProfessorAsyncById(int professorId, bool isAlunoIncluido);
     }

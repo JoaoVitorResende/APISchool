@@ -20,6 +20,16 @@
         "tags": [
           "Alunos"
         ],
+        "parameters": [
+          {
+            "name": "AlunoId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -83,6 +93,25 @@
             }
           }
         ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Aluno"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Aluno"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Aluno"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -96,6 +125,29 @@
         "parameters": [
           {
             "name": "AlunoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Alunos/ByProfessor/{ProfessorId}": {
+      "get": {
+        "tags": [
+          "Alunos"
+        ],
+        "parameters": [
+          {
+            "name": "ProfessorId",
             "in": "path",
             "required": true,
             "schema": {
@@ -180,7 +232,7 @@
         ],
         "parameters": [
           {
-            "name": "ProfessorId",
+            "name": "professorId",
             "in": "path",
             "required": true,
             "schema": {
@@ -189,6 +241,25 @@
             }
           }
         ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Professor"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Professor"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Professor"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"

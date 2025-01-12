@@ -16,11 +16,12 @@ namespace SchoolApi.Controllers
             _repo = model;
         }
         [HttpGet]
-        public IActionResult Get()
+        public async Task<IActionResult> GetAllProfessores()
         {
             try
             {
-                return Ok();
+                var result = await _repo.GetAllProfessoresAsync(true);
+                return Ok(result);
             }
             catch (Exception ex)
             {
@@ -28,17 +29,19 @@ namespace SchoolApi.Controllers
             }
         }
         [HttpGet("{ProfessorId}")]
-        public IActionResult Get(int ProfessorId)
+        public async Task<IActionResult> GetProfessoresById(int ProfessorId)
         {
             try
             {
-                return Ok();
+                var result = await _repo.GetProfessorAsyncById(ProfessorId, true);
+                return Ok(result);
             }
             catch (Exception ex)
             {
                 return StatusCode(StatusCodes.Status503ServiceUnavailable, "Serviço indisponivel");
             }
         }
+       
         [HttpPost]
         public async Task<IActionResult> Post(Professor model)
         {
@@ -57,28 +60,45 @@ namespace SchoolApi.Controllers
             return BadRequest();
         }
         [HttpPut("{ProfessorId}")]
-        public IActionResult Put(int ProfessorId)
+        public async Task<IActionResult> Put(int professorId, Professor model)
         {
             try
             {
-                return Ok();
+                var professor = await _repo.GetProfessorAsyncById(professorId, false);
+                if (professor == null) return NotFound();
+
+                _repo.Update(model);
+
+                if (await _repo.SaveChangesAsync())
+                {
+                    return Created($"/api/professor/{model.Id}", professor);
+                }
             }
             catch (Exception ex)
             {
                 return StatusCode(StatusCodes.Status503ServiceUnavailable, "Serviço indisponivel");
             }
+            return BadRequest();
         }
         [HttpDelete("{ProfessorId}")]
-        public IActionResult Delete(int ProfessorId)
+        public async Task<IActionResult> Delete(int ProfessorId)
         {
             try
             {
-                return Ok();
+                var professor = await _repo.GetProfessorAsyncById(ProfessorId, false);
+                if (professor == null) return NotFound();
+                _repo.Delete(professor);
+
+                if (await _repo.SaveChangesAsync())
+                {
+                    return Ok();
+                }
             }
             catch (Exception ex)
             {
                 return StatusCode(StatusCodes.Status503ServiceUnavailable, "Serviço indisponivel");
             }
+            return BadRequest();
         }
     }
 }
