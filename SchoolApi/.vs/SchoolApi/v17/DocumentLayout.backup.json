@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "E:\\Git\\APISchool\\SchoolApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E6E6FAB2-A867-40CA-A551-E20CEFAB133C}|SchoolApi\\SchoolApi.csproj|e:\\git\\apischool\\schoolapi\\schoolapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6E6FAB2-A867-40CA-A551-E20CEFAB133C}|SchoolApi\\SchoolApi.csproj|solutionrelative:schoolapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6E6FAB2-A867-40CA-A551-E20CEFAB133C}|SchoolApi\\SchoolApi.csproj|e:\\git\\apischool\\schoolapi\\schoolapi\\controllers\\professorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6E6FAB2-A867-40CA-A551-E20CEFAB133C}|SchoolApi\\SchoolApi.csproj|solutionrelative:schoolapi\\controllers\\professorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E6E6FAB2-A867-40CA-A551-E20CEFAB133C}|SchoolApi\\SchoolApi.csproj|e:\\git\\apischool\\schoolapi\\schoolapi\\controllers\\alunoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6E6FAB2-A867-40CA-A551-E20CEFAB133C}|SchoolApi\\SchoolApi.csproj|solutionrelative:schoolapi\\controllers\\alunoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6E6FAB2-A867-40CA-A551-E20CEFAB133C}|SchoolApi\\SchoolApi.csproj|e:\\git\\apischool\\schoolapi\\schoolapi\\models\\aluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6E6FAB2-A867-40CA-A551-E20CEFAB133C}|SchoolApi\\SchoolApi.csproj|solutionrelative:schoolapi\\models\\aluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\Git\\APISchool\\SchoolApi\\SchoolApi\\Program.cs",
-              "RelativeDocumentMoniker": "SchoolApi\\Program.cs",
-              "ToolTip": "E:\\Git\\APISchool\\SchoolApi\\SchoolApi\\Program.cs",
-              "RelativeToolTip": "SchoolApi\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T15:49:25.32Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProfessorController.cs",
-              "DocumentMoniker": "E:\\Git\\APISchool\\SchoolApi\\SchoolApi\\Controllers\\ProfessorController.cs",
-              "RelativeDocumentMoniker": "SchoolApi\\Controllers\\ProfessorController.cs",
-              "ToolTip": "E:\\Git\\APISchool\\SchoolApi\\SchoolApi\\Controllers\\ProfessorController.cs",
-              "RelativeToolTip": "SchoolApi\\Controllers\\ProfessorController.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAmwFcAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T15:15:41.362Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "AlunosController.cs",
               "DocumentMoniker": "E:\\Git\\APISchool\\SchoolApi\\SchoolApi\\Controllers\\AlunosController.cs",
               "RelativeDocumentMoniker": "SchoolApi\\Controllers\\AlunosController.cs",
               "ToolTip": "E:\\Git\\APISchool\\SchoolApi\\SchoolApi\\Controllers\\AlunosController.cs",
               "RelativeToolTip": "SchoolApi\\Controllers\\AlunosController.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAuwHIAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAADcAAAAAAAAAAAAcwD8AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T15:15:40.813Z",
+              "WhenOpened": "2025-01-12T19:30:02.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Aluno.cs",
+              "DocumentMoniker": "E:\\Git\\APISchool\\SchoolApi\\SchoolApi\\Models\\Aluno.cs",
+              "RelativeDocumentMoniker": "SchoolApi\\Models\\Aluno.cs",
+              "ToolTip": "E:\\Git\\APISchool\\SchoolApi\\SchoolApi\\Models\\Aluno.cs",
+              "RelativeToolTip": "SchoolApi\\Models\\Aluno.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T19:15:08.312Z",
               "EditorCaption": ""
             }
           ]

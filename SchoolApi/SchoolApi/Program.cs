@@ -5,23 +5,36 @@ using SchoolApi.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()  // Allow all origins
+              .AllowAnyHeader()  // Allow any headers
+              .AllowAnyMethod();  // Allow any methods
+    });
+});
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers().AddJsonOptions(options =>
-    {
-        // Aqui definimos as opções de serialização JSON
-        options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;  // Habilita preservação de referências
-        options.JsonSerializerOptions.MaxDepth = 32; // Ajusta a profundidade máxima da serialização
-    });
-builder.Services.AddScoped<IRepository,Repository>();
+{
+    // Aqui definimos as opções de serialização JSON
+    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;  // Habilita preservação de referências
+    options.JsonSerializerOptions.MaxDepth = 32; // Ajusta a profundidade máxima da serialização
+});
+
+builder.Services.AddScoped<IRepository, Repository>();
 string connectionString = "Data Source=ProjectSchool.db";
 builder.Services.AddDbContext<DataContext>(
     sql => sql.UseSqlite(connectionString));
 
 var app = builder.Build();
+
+// UseCors com a política especificada
+app.UseCors("AllowAll");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -31,9 +44,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
 
 app.Run();
