@@ -16,7 +16,13 @@
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "SchoolApi.Models.Aluno",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -84,7 +90,13 @@
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "SchoolApi.Models.Professor",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

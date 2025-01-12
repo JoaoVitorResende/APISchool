@@ -9,6 +9,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IRepository,Repository>();
 string connectionString = "Data Source=ProjectSchool.db";
 builder.Services.AddDbContext<DataContext>(
     sql => sql.UseSqlite(connectionString));

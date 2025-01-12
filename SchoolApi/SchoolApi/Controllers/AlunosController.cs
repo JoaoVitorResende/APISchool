@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SchoolApi.Data;
+using SchoolApi.Models;
 
 namespace SchoolApi.Controllers
 {
@@ -7,9 +9,11 @@ namespace SchoolApi.Controllers
     [ApiController]
     public class AlunosController : ControllerBase
     {
-        public AlunosController()
+        public IRepository _repo { get; }
+
+        public AlunosController(IRepository repo)
         {
-            
+            _repo = repo;
         }
         [HttpGet]
         public IActionResult Get()
@@ -37,16 +41,21 @@ namespace SchoolApi.Controllers
             }
         }
         [HttpPost]
-        public IActionResult Post()
+        public async Task<IActionResult> Post(Aluno model)
         {
             try
             {
-                return Ok();
+                _repo.Add(model);
+                if (await _repo.SaveChangesAsync())
+                {
+                    return Created($"/api/Alunos{model.Id}", model);
+                }
             }
             catch (Exception ex)
             {
                 return StatusCode(StatusCodes.Status503ServiceUnavailable, "Serviço indisponivel");
             }
+            return BadRequest();
         }
         [HttpPut("{AlunoId}")]
         public IActionResult Put(int AlunoId) 

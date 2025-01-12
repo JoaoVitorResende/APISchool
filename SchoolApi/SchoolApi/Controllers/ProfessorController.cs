@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SchoolApi.Data;
+using SchoolApi.Models;
 
 namespace SchoolApi.Controllers
 {
@@ -7,9 +9,11 @@ namespace SchoolApi.Controllers
     [ApiController]
     public class ProfessorController : ControllerBase
     {
-        public ProfessorController()
+        public IRepository _repo { get; }
+
+        public ProfessorController(IRepository model)
         {
-            
+            _repo = model;
         }
         [HttpGet]
         public IActionResult Get()
@@ -36,16 +40,21 @@ namespace SchoolApi.Controllers
             }
         }
         [HttpPost]
-        public IActionResult Post()
+        public async Task<IActionResult> Post(Professor model)
         {
             try
             {
-                return Ok();
+                _repo.Add(model);
+                if (await _repo.SaveChangesAsync())
+                {
+                    return Created($"/api/Professores{model.Id}", model);
+                }
             }
             catch (Exception ex)
             {
                 return StatusCode(StatusCodes.Status503ServiceUnavailable, "Serviço indisponivel");
             }
+            return BadRequest();
         }
         [HttpPut("{ProfessorId}")]
         public IActionResult Put(int ProfessorId)
